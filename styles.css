@@ -1,0 +1,128 @@
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navegación */
+nav {
+    background-color: #333;
+    padding: 10px 0; /* Añadir un poco de espaciado alrededor del menú */
+}
+
+nav .container {
+    width: 80%;
+    margin: auto; /* Centrar el menú */
+    text-align: center;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* Contenedor general */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilo de la cuadrícula de piezas */
+.piezas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Espacio para las imágenes más pequeñas */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo para cada pieza */
+.pieza-item {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Tamaño reducido de las imágenes para las piezas */
+.pieza-item img {
+    width: 150px; /* Cambiado a 150px para mayor compacidad */
+    height: 150px; /* Cambiado a 150px para mayor compacidad */
+    object-fit: cover; /* Mantener la proporción de la imagen mientras se ajusta al tamaño */
+    border-radius: 5px;
+}
+
+/* Estilo para las imágenes de los coches */
+table img {
+    width: 150px; /* Ajustado a 150px */
+    height: 150px; /* Ajustado a 150px */
+    object-fit: cover; /* Mantiene la proporción de la imagen mientras se ajusta al tamaño */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* Cabeceras de la tabla */
+th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para las filas alternas */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo de las imágenes */
+img {
+    width: 100px;
+    height: auto;
+}
+
+/* Estilo para la imagen de portada */
+.portada {
+    width: 100%;
+    height: 400px; /* Ajusta la altura de la portada */
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px; /* Añade un margen superior para separación */
+}
+
+.portada-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+}
