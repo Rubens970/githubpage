@@ -26,27 +26,26 @@
 <!-- Contenido principal -->
 <div class="container">
     <h2>Contacto</h2>
-    <p>Si tienes alguna pregunta o consulta, puedes contactarnos a través de nuestro correo electrónico.</p>
+    <p>Si tienes alguna pregunta o consulta, puedes contactarnos a través de este Formulario.</p>
 
-    <!-- Dirección de correo electrónico -->
-    <p><strong>Correo electrónico:</strong> <a href="mailto:info@tiendatuning.com">info@tiendatuning.com</a></p>
+    <!-- Formulario de contacto -->
+    <h3>Formulario de contacto</h3>
+    <form action="/submit_contact" method="post">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required><br><br>
 
-    <!-- Plantilla de información para el mensaje -->
-    <h3>Plantilla para enviar un mensaje:</h3>
-    <p>Por favor, incluye la siguiente información en tu mensaje para que podamos asistirte de la mejor manera posible:</p>
-    <ul>
-        <li><strong>Nombre:</strong> Tu nombre completo.</li>
-        <li><strong>Asunto:</strong> Breve descripción de tu consulta.</li>
-        <li><strong>Descripción:</strong> Detalla lo que necesitas (por ejemplo, consultas sobre un coche o pieza específica).</li>
-        <li><strong>Teléfono (opcional):</strong> Un número de contacto para mayor rapidez.</li>
-    </ul>
-    
-    <p>Ejemplo de mensaje:</p>
-    <blockquote>
-        <p><strong>Asunto:</strong> Consulta sobre disponibilidad de piezas de Ford Mustang</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>Hola, me gustaría saber si tienen disponible el kit de escape para un Ford Mustang modelo 2020. También quisiera conocer los tiempos de entrega y el precio total. Mi nombre es Juan Pérez y mi número de contacto es 666889955.</p>
-    </blockquote>
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required><br><br>
+
+        <label for="subject">Asunto:</label><br>
+        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required><br><br>
+
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
 </div>
 
 </body>
