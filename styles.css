@@ -1,166 +1,51 @@
 /* Estilo general del cuerpo */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+body{font-family:Arial,sans-serif;background-color:#f4f4f4;margin:0;}
 
 /* Encabezado */
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+.header{background-color:#333;color:#fff;padding:10px 0;text-align:center;}
 
 /* Navegación */
-.nav {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-.nav .container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-}
-
-.nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.nav a:hover {
-    color: #ff6600;
-}
+.nav{background-color:#333;padding:10px 0;}
+.nav .container{width:80%;margin:auto;text-align:center;}
+.nav a{margin:0 15px;color:white;font-weight:bold;text-decoration:none;}
+.nav a:hover{color:#ff6600;} /* Color al pasar el mouse */
 
 /* Contenedor general */
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
+.container{width:80%;margin:auto;overflow:hidden;}
 
 /* Estilo de la cuadrícula de piezas */
-.piezas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el tamaño para pantallas más pequeñas */
-    gap: 20px;
-    margin-top: 20px;
-}
+.piezas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:20px;justify-items:center;}
 
 /* Estilo para cada pieza */
-.pieza-item {
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-/* Tamaño ajustado para las imágenes de las piezas */
-.pieza-item img {
-    width: 100%; /* Las imágenes se ajustan al tamaño del contenedor */
-    max-width: 200px; /* El tamaño máximo será de 200px */
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-}
+.pieza-item{text-align:center;padding:10px;background-color:#fff;border:1px solid #ddd;border-radius:5px;}
+.pieza-item img{width:100%;max-width:200px;height:auto;object-fit:cover;border-radius:5px;}
 
 /* Estilo para las imágenes de los coches */
-table img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-}
+table img{width:150px;height:auto;object-fit:cover;border-radius:5px;}
 
 /* Estilo de la tabla */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-}
-
-/* Cabeceras de la tabla */
-th {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-/* Celdas de la tabla */
-td {
-    padding: 8px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-/* Estilo para las filas alternas */
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
+table{width:100%;border-collapse:collapse;margin-top:20px;background-color:white;}
+th{background-color:#333;color:white;padding:10px;border:1px solid #ddd;}
+td{padding:8px;text-align:center;border:1px solid #ddd;}
+tr:nth-child(even){background-color:#f2f2f2;}
 
 /* Estilo de las imágenes */
-img {
-    width: 100px;
-    height: auto;
-}
+img{width:100px;height:auto;}
 
 /* Estilo para la imagen de portada */
-.portada {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-    margin-top: 20px;
-}
-
-.portada-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.portada{width:100%;height:400px;overflow:hidden;position:relative;margin-top:20px;}
+.portada-img{width:100%;height:100%;object-fit:cover;}
 
 /* Estilo para el formulario de contacto */
-form {
-    margin-top: 20px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+form{margin-top:20px;background-color:#f9f9f9;padding:20px;border:1px solid #ddd;border-radius:5px;}
+form label{font-weight:bold;color:#333;}
+form input[type="text"],form input[type="email"],form input[type="date"],form select,form textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;}
+form input[type="file"]{margin:8px 0;} /* Estilo para campo de archivo */
 
-form label {
-    font-weight: bold;
-    color: #333;
-}
+/* Estilo para el botón de enviar */
+.tick-button{background-color:#000;color:white;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;display:inline-flex;align-items:center;}
+.tick-button img{width:20px;height:20px;margin-left:5px;}
+.tick-button:hover{background-color:#333;} /* Cambiar color al pasar el ratón */
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-form input[type="submit"] {
-    background-color: #000000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #000000;
-}
+/* Estilo para los botones de radio */
+form input[type="radio"]{margin-right:5px;} /* Espaciado entre el botón y la etiqueta */
