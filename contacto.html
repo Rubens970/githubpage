@@ -2,11 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda de Coches y Piezas Tuning - Contacto</title>
-    <link rel="icon" href="images/llave.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css"> <!-- Enlazamos el archivo CSS -->
+    <link rel="icon" href="images/llave.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -33,16 +33,16 @@
     <h3>Formulario de contacto</h3>
     <form action="/submit_contact" method="post">
         <label for="name">Nombre:</label><br />
-        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required /><br /><br />
+        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required="required" /><br /><br />
 
         <label for="email">Correo electrónico:</label><br />
-        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required /><br /><br />
+        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required="required" /><br /><br />
 
         <label for="subject">Asunto:</label><br />
-        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required /><br /><br />
+        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required="required" /><br /><br />
 
         <label for="message">Mensaje:</label><br />
-        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea><br /><br />
+        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required="required"></textarea><br /><br />
 
         <input type="submit" value="Enviar" />
     </form>
