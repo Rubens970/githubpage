@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda de Coches y Piezas Tuning - Contacto</title>
     <link rel="icon" href="images/llave.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" /> <!-- Enlazamos el archivo CSS -->
 </head>
 <body>
 
-<!-- Reemplazo de <header> por un <div> con clase "header" -->
 <div class="header">
     <h1>Tienda de Coches y Piezas Tuning</h1>
 </div>
 
-<!-- Reemplazo de <nav> por un <div> con clase "nav" -->
+<!-- Menú de navegación -->
 <div class="nav">
     <div class="container">
         <a href="index.html">Inicio</a>
@@ -27,28 +26,48 @@
 
 <div class="container">
     <h2>Contacto</h2>
-    <p>Si tienes alguna pregunta o consulta, puedes contactarnos a través de este Formulario.</p>
+    <p>Si tienes alguna pregunta o consulta, por favor completa el siguiente formulario.</p>
 
-    <!-- Formulario de contacto -->
-    <form action="/submit_contact" method="post">
+    <h3>Formulario de contacto</h3>
+    <form action="/submit_contact" method="post" enctype="multipart/form-data">
         <label for="name">Nombre:</label><br />
         <input type="text" id="name" name="name" placeholder="Tu nombre completo" required="required" /><br /><br />
 
         <label for="email">Correo electrónico:</label><br />
         <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required="required" /><br /><br />
 
-        <label for="subject">Asunto:</label><br />
-        <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required="required" /><br /><br />
+        <label for="date">Fecha:</label><br />
+        <input type="date" id="date" name="date" required="required" /><br /><br />
+
+        <label for="queryType">Tipo de consulta:</label><br />
+        <select id="queryType" name="queryType" required="required">
+            <option value="">Selecciona un tipo de consulta</option>
+            <option value="info">Información General</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="ventas">Ventas</option>
+            <option value="otros">Otros</option>
+        </select><br /><br />
+
+        <label>Método de contacto preferido:</label><br />
+        <input type="radio" id="emailContact" name="contactMethod" value="email" checked />
+        <label for="emailContact">Email</label><br />
+        <input type="radio" id="phoneContact" name="contactMethod" value="phone" />
+        <label for="phoneContact">Teléfono</label><br /><br />
 
         <label for="message">Mensaje:</label><br />
         <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required="required"></textarea><br /><br />
 
-        <input type="submit" value="Enviar" />
+        <!-- Campo para subir archivos -->
+        <label for="file">Subir archivo (opcional):</label><br />
+        <input type="file" id="file" name="file" accept="image/*,.pdf,.doc,.docx" /><br /><br />
+
+        <!-- Botón de enviar con tick -->
+        <button type="submit" class="tick-button">
+            Enviar
+            <img src="images/tick.png" alt="Tick" />
+        </button>
     </form>
 </div>
-<p>
-    <a href="https://validator.w3.org/markup/check?uri=referer"><img
-      src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
-</p>
+
 </body>
 </html>
