@@ -10,27 +10,26 @@
 </head>
 <body>
 
-<header>
+<!-- Reemplazo de <header> por un <div> con clase "header" -->
+<div class="header">
     <h1>Tienda de Coches y Piezas Tuning</h1>
-</header>
+</div>
 
-<!-- Menú de navegación -->
-<nav>
+<!-- Reemplazo de <nav> por un <div> con clase "nav" -->
+<div class="nav">
     <div class="container">
         <a href="index.html">Inicio</a>
         <a href="coches.html">Coches</a>
         <a href="piezas.html">Piezas de Tuning</a>
         <a href="contacto.html">Contacto</a>
     </div>
-</nav>
+</div>
 
-<!-- Contenido principal -->
 <div class="container">
     <h2>Contacto</h2>
     <p>Si tienes alguna pregunta o consulta, puedes contactarnos a través de este Formulario.</p>
 
     <!-- Formulario de contacto -->
-    <h3>Formulario de contacto</h3>
     <form action="/submit_contact" method="post">
         <label for="name">Nombre:</label><br />
         <input type="text" id="name" name="name" placeholder="Tu nombre completo" required="required" /><br /><br />
@@ -46,7 +45,6 @@
 
         <input type="submit" value="Enviar" />
     </form>
-
 </div>
 
 </body>
