@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +10,12 @@
 </head>
 <body>
 
-<!-- Reemplazo de <header> por un <div> con clase "header" -->
+<!-- Encabezado -->
 <div class="header">
     <h1>Tienda de Coches y Piezas Tuning</h1>
 </div>
 
-<!-- Reemplazo de <nav> por un <div> con clase "nav" -->
+<!-- Navegación -->
 <div class="nav">
     <div class="container">
         <a href="index.html">Inicio</a>
@@ -35,6 +35,23 @@
     <img src="images/taller.jpg" alt="Imagen de portada de un taller" class="portada-img" />
 </div>
 
+<!-- Mapa de imagen para la ubicación del servidor -->
+<div id="contenido">
+    <h2>Ubicación del Servidor - Ciudad Real</h2>
+    <p>Nuestro servidor está ubicado en Ciudad Real, Castilla-La Mancha. Puedes ver su ubicación en el siguiente mapa:</p>
+
+    <!-- Imagen con mapa de España -->
+    <img src="images/servidor.jpeg" usemap="#zonas" alt="Mapa de España" />
+
+    <!-- Definición del mapa de imagen -->
+    <map name="zonas">
+        <!-- Coordenadas ajustadas para Ciudad Real -->
+        <area shape="rect" coords="310,360,390,390" href="https://www.google.es/maps/place/Ciudad+Real/@38.9577517,-4.5018391,9z/data=!3m1!4b1!4m6!3m5!1s0xd6bddc90e04fceb:0x30340f3be4bca00!8m2!3d38.9169569!4d-4.0695454!16zL20vMDEyNDky?entry=ttu&amp;g_ep=EgoyMDI0MTAxMy4wIKXMDSoASAFQAw%3D%3D" title="Ir a Ciudad Real" alt="Ciudad Real" />
+        <area shape="default" nohref="nohref" />
+    </map>
+</div>
+
+<!-- Validación de XHTML -->
 <p class="validation">
     <a href="https://validator.w3.org/markup/check?uri=referer">
         <img src="https://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
