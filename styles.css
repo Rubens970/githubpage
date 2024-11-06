@@ -201,3 +201,10 @@ form input[type="file"] {
 form input[type="radio"] {
     margin-right: 5px; /* Espaciado entre el botón y la etiqueta */
 }
+
+.rotado {
+    transform: rotate(90deg);
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 80px;
+}
