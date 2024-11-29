@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Compra - Concesionario Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Tienda de Coches y Piezas Tuning</h1>
+    </div>
+    
+    <div class="nav">
+        <div class="container">
+            <a href="index.html">Inicio</a>
+            <a href="coches.html">Coches</a>
+            <a href="piezas.html">Piezas de Tuning</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="compra.html">compra</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <h2>Datos del Cliente</h2>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="example@correo.com" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890" required>
+
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion" rows="3" placeholder="Tu dirección completa" required></textarea>
+
+            <h2>Selecciona el Vehículo</h2>
+            <label for="marca">Marca:</label>
+            <select id="marca" name="marca" required>
+                <option value="" disabled selected>Selecciona una marca</option>
+                <option value="toyota">Toyota</option>
+                <option value="ford">Ford</option>
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+            </select>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla, Mustang" required>
+
+            <label for="color">Color Preferido:</label>
+            <input type="text" id="color" name="color" placeholder="Ej: Rojo, Azul">
+
+            <label for="foto">Subir Foto del Vehículo (opcional):</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+
+            <h2>Detalles de Pago</h2>
+            <label for="metodo_pago">Método de Pago:</label>
+            <select id="metodo_pago" name="metodo_pago" required>
+                <option value="" disabled selected>Selecciona un método</option>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+                <option value="efectivo">Pago en Efectivo</option>
+            </select>
+
+            <label for="fecha_pago">Fecha Estimada de Pago:</label>
+            <input type="date" id="fecha_pago" name="fecha_pago" required>
+
+            <label for="comentarios">Comentarios o Peticiones Especiales:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Agrega tus comentarios aquí"></textarea>
+
+            <h2>Aceptación de Términos</h2>
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos">Acepto los términos y condiciones de compra</label>
+
+            <div class="alinear-centro">
+                <button type="submit" class="tick-button">Enviar Solicitud</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
