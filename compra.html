@@ -18,26 +18,28 @@
             <a href="coches.html">Coches</a>
             <a href="piezas.html">Piezas de Tuning</a>
             <a href="contacto.html">Contacto</a>
-            <a href="compra.html">compra</a>
+            <a href="compra.html">Compra</a>
         </div>
     </div>
 
     <div class="container">
         <form action="/submit" method="POST" enctype="multipart/form-data">
             <h2>Datos del Cliente</h2>
+            
             <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo se permiten letras y espacios">
+            
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" placeholder="example@correo.com" required>
-
+            
             <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890" required>
-
+            <input type="tel" id="telefono" name="telefono" placeholder="123456789" required pattern="[0-9]{9}" title="Debe ingresar 9 dígitos numéricos">
+            
             <label for="direccion">Dirección:</label>
             <textarea id="direccion" name="direccion" rows="3" placeholder="Tu dirección completa" required></textarea>
 
             <h2>Selecciona el Vehículo</h2>
+            
             <label for="marca">Marca:</label>
             <select id="marca" name="marca" required>
                 <option value="" disabled selected>Selecciona una marca</option>
@@ -57,6 +59,7 @@
             <input type="file" id="foto" name="foto" accept="image/*">
 
             <h2>Detalles de Pago</h2>
+            
             <label for="metodo_pago">Método de Pago:</label>
             <select id="metodo_pago" name="metodo_pago" required>
                 <option value="" disabled selected>Selecciona un método</option>
@@ -66,10 +69,7 @@
             </select>
 
             <label for="fecha_pago">Fecha Estimada de Pago:</label>
-            <input type="date" id="fecha_pago" name="fecha_pago" required>
-
-            <label for="comentarios">Comentarios o Peticiones Especiales:</label>
-            <textarea id="comentarios" name="comentarios" rows="4" placeholder="Agrega tus comentarios aquí"></textarea>
+            <input type="date" id="fecha_pago" name="fecha_pago" required min="<?php echo date('Y-m-d'); ?>">
 
             <h2>Aceptación de Términos</h2>
             <input type="checkbox" id="terminos" name="terminos" required>
@@ -80,5 +80,6 @@
             </div>
         </form>
     </div>
+
 </body>
 </html>
