@@ -54,58 +54,72 @@
                 </div>
 
                 <div>
-                    <label for="date">Fecha:</label><br />
-                    <input type="text" id="date" name="date" />
+                    <label for="birthdate">Fecha de nacimiento:</label><br />
+                    <input type="text" id="birthdate" name="birthdate" />
+                    <small>Formato: AAAA-MM-DD</small>
+                </div>
+
+                <div>
+                    <label for="country">País:</label><br />
+                    <select id="country" name="country">
+                        <option value="esp">España</option>
+                        <option value="mex">México</option>
+                        <option value="col">Colombia</option>
+                        <option value="arg">Argentina</option>
+                        <option value="chile">Chile</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Servicios adicionales:</label><br />
+                    <input type="checkbox" id="insurance" name="services" value="insurance" />
+                    <label for="insurance">Seguro</label><br />
+                    <input type="checkbox" id="repair" name="services" value="repair" />
+                    <label for="repair">Reparación</label><br />
+                    <input type="checkbox" id="tuning" name="services" value="tuning" />
+                    <label for="tuning">Tuning</label>
+                </div>
+
+                <div>
+                    <label>Método de pago preferido:</label><br />
+                    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" />
+                    <label for="creditCard">Tarjeta de crédito</label><br />
+                    <input type="radio" id="paypal" name="paymentMethod" value="paypal" />
+                    <label for="paypal">PayPal</label><br />
+                    <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer" />
+                    <label for="bankTransfer">Transferencia bancaria</label>
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Consulta</legend>
                 <div>
-                    <label for="queryType">Tipo de consulta:</label><br />
-                    <select id="queryType" name="queryType">
-                        <option value="">Selecciona un tipo de consulta</option>
-                        <option value="info">Información General</option>
-                        <option value="soporte">Soporte Técnico</option>
-                        <option value="ventas">Ventas</option>
-                        <option value="devoluciones">Devoluciones</option>
-                        <option value="otros">Otros</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="website">Página Web:</label><br />
-                    <input type="text" id="website" name="website" />
-                </div>
-
-                <div>
-                    <label>Método de contacto preferido:</label><br />
-                    <input type="radio" id="emailContact" name="contactMethod" value="email" checked="checked" />
-                    <label for="emailContact">Email</label><br />
-                    <input type="radio" id="phoneContact" name="contactMethod" value="phone" />
-                    <label for="phoneContact">Teléfono</label>
-                </div>
-
-                <div>
                     <label for="message">Mensaje:</label><br />
                     <textarea id="message" name="message" rows="5" cols="30"></textarea>
                 </div>
-            </fieldset>
 
-            <fieldset>
-                <legend>Archivos</legend>
                 <div>
                     <label for="file">Subir archivo (opcional):</label><br />
                     <input type="file" id="file" name="file" accept="image/*,.pdf,.doc,.docx" />
                 </div>
-            </fieldset>
 
-            <div>
-                <button type="submit" class="tick-button">
-                    Enviar
-                    <img src="images/tick.png" alt="Tick" />
-                </button>
-            </div>
+                <div>
+                    <label for="date">Fecha de consulta:</label><br />
+                    <input type="text" id="date" name="date" />
+                    <small>Formato: AAAA-MM-DD</small>
+                </div>
+
+                <div>
+                    <button type="submit" class="submit-button">
+                        Enviar
+                        <img src="images/tick.png" alt="Enviar" />
+                    </button>
+                </div>
+
+                <div>
+                    <button type="reset" class="reset-button">Restablecer</button>
+                </div>
+            </fieldset>
         </form>
     </div>
 
