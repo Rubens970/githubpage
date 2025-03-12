@@ -4,142 +4,41 @@
     <title>Tienda de Coches XYZ</title>
     <link>https://rubens970.github.io/githubpage/</link>
     <description>Últimos vehículos disponibles y ofertas especiales en nuestra tienda de coches y piezas de tuning</description>
-    <language>es</language>
-    <pubDate>Sun, 10 Mar 2025 09:00:00 +0000</pubDate>
-    <lastBuildDate>Sun, 10 Mar 2025 09:00:00 +0000</lastBuildDate>
-    <generator>Generador RSS de Tienda de Coches XYZ</generator>
 
-    <!-- Imagen del canal -->
-    <image>
-      <url>https://rubens970.github.io/githubpage/images/audi_r8_1.jpg</url> <!-- Reemplazado con una imagen real -->
-      <title>Tienda de Coches XYZ</title>
-      <link>https://rubens970.github.io/githubpage/</link>
-      <width>88</width>
-      <height>31</height>
-    </image>
-
-    <!-- Sección de Coches -->
-    <category>Coches</category>
-
-    <!-- Coche 1 -->
     <item>
       <title>Nuevo Toyota Corolla 2025</title>
       <link>https://rubens970.github.io/githubpage/coches/toyota-corolla-2025</link>
-      <description>
-        <div class="item-description">
-          Descubre el nuevo Toyota Corolla 2025, con las últimas características de seguridad y tecnología avanzada. Ideal para la ciudad con una eficiencia de combustible impresionante.
-        </div>
-      </description>
-      <category>Coches Nuevos</category>
-      <pubDate>Sun, 10 Mar 2025 09:00:00 +0000</pubDate>
-      <guid>https://rubens970.github.io/githubpage/coches/toyota-corolla-2025</guid>
-      <price>22,000 €</price>
-      <image>
-        <url>https://rubens970.github.io/githubpage/images/toyota_corolla_2025.jpg</url>
-        <title>Toyota Corolla 2025</title>
-      </image>
-      <location>Madrid, España</location>
+      <description>Descubre el nuevo Toyota Corolla 2025, con las últimas características de seguridad y tecnología avanzada. Ideal para la ciudad con una eficiencia de combustible impresionante.</description>
     </item>
 
-    <!-- Coche 2 -->
     <item>
       <title>Oferta especial: Ford Mustang 2024</title>
       <link>https://rubens970.github.io/githubpage/coches/ford-mustang-2024</link>
-      <description>
-        <div class="item-description">
-          ¡Aprovecha nuestra oferta especial por tiempo limitado para el Ford Mustang 2024! Con un descuento exclusivo para compras online.
-        </div>
-      </description>
-      <category>Ofertas Especiales</category>
-      <pubDate>Sat, 09 Mar 2025 15:00:00 +0000</pubDate>
-      <guid>https://rubens970.github.io/githubpage/coches/ford-mustang-2024</guid>
-      <price>55,000 €</price>
-      <image>
-        <url>https://rubens970.github.io/githubpage/images/ford_mustang1.jpg</url>
-        <title>Ford Mustang 2024</title>
-      </image>
-      <location>Barcelona, España</location>
+      <description>¡Aprovecha nuestra oferta especial por tiempo limitado para el Ford Mustang 2024! Con un descuento exclusivo para compras online.</description>
     </item>
 
-    <!-- Coche 3 -->
     <item>
       <title>Audi A4 2023 en stock</title>
       <link>https://rubens970.github.io/githubpage/coches/audi-a4-2023</link>
-      <description>
-        <div class="item-description">
-          El elegante Audi A4 2023 ahora disponible en nuestro concesionario. Descúbrelo en detalle y disfruta de un diseño exclusivo.
-        </div>
-      </description>
-      <category>Coches en Stock</category>
-      <pubDate>Fri, 08 Mar 2025 13:30:00 +0000</pubDate>
-      <guid>https://rubens970.github.io/githubpage/coches/audi-a4-2023</guid>
-      <price>35,000 €</price>
-      <image>
-        <url>https://rubens970.github.io/githubpage/images/audi_r8_2.jpg</url> <!-- Cambié a una imagen disponible -->
-        <title>Audi A4 2023</title>
-      </image>
-      <location>Valencia, España</location>
+      <description>El elegante Audi A4 2023 ahora disponible en nuestro concesionario. Descúbrelo en detalle y disfruta de un diseño exclusivo.</description>
     </item>
 
-    <!-- Coche 4 -->
     <item>
       <title>Nuevo SUV BMW X5 2025</title>
       <link>https://rubens970.github.io/githubpage/coches/bmw-x5-2025</link>
-      <description>
-        <div class="item-description">
-          Explora el nuevo SUV BMW X5 2025, ahora disponible con nuevas opciones de motorización y tecnología. Perfecto para familias.
-        </div>
-      </description>
-      <category>Coches Nuevos</category>
-      <pubDate>Thu, 07 Mar 2025 10:45:00 +0000</pubDate>
-      <guid>https://rubens970.github.io/githubpage/coches/bmw-x5-2025</guid>
-      <price>50,000 €</price>
-      <image>
-        <url>https://rubens970.github.io/githubpage/images/bmw_m3_1.jpg</url> <!-- Otra imagen disponible -->
-        <title>BMW X5 2025</title>
-      </image>
-      <location>Sevilla, España</location>
+      <description>Explora el nuevo SUV BMW X5 2025, ahora disponible con nuevas opciones de motorización y tecnología. Perfecto para familias.</description>
     </item>
 
-    <!-- Sección de Piezas de Tuning -->
-    <category>Piezas de Tuning</category>
-
-    <!-- Pieza 1 -->
     <item>
       <title>Pieza de Tuning para Ford Mustang</title>
       <link>https://rubens970.github.io/githubpage/piezas/ford-mustang-tuning</link>
-      <description>
-        <div class="item-description">
-          Mejora el rendimiento de tu Ford Mustang con nuestra pieza de tuning exclusiva. Aumenta la potencia y mejora el estilo de tu coche.
-        </div>
-      </description>
-      <category>Piezas de Tuning</category>
-      <pubDate>Mon, 10 Mar 2025 12:00:00 +0000</pubDate>
-      <guid>https://rubens970.github.io/githubpage/piezas/ford-mustang-tuning</guid>
-      <price>1,500 €</price>
-      <image>
-        <url>https://rubens970.github.io/githubpage/images/kit_escape.jpg</url> <!-- Pieza de tuning -->
-        <title>Pieza de Tuning Ford Mustang</title>
-      </image>
+      <description>Mejora el rendimiento de tu Ford Mustang con nuestra pieza de tuning exclusiva. Aumenta la potencia y mejora el estilo de tu coche.</description>
     </item>
 
-    <!-- Pieza 2 -->
     <item>
       <title>Suspensión Deportiva para BMW M3</title>
       <link>https://rubens970.github.io/githubpage/piezas/bmw-m3-suspension</link>
-      <description>
-        <div class="item-description">
-          Suspensión deportiva para tu BMW M3. Mejora la estabilidad y la conducción de tu coche en todas las condiciones.
-        </div>
-      </description>
-      <category>Piezas de Tuning</category>
-      <pubDate>Tue, 11 Mar 2025 16:00:00 +0000</pubDate>
-      <guid>https://rubens970.github.io/githubpage/piezas/bmw-m3-suspension</guid>
-      <price>2,200 €</price>
-      <image>
-        <url>https://rubens970.github.io/githubpage/images/suspension_deportiva.jpg</url> <!-- Suspensión deportiva -->
-        <title>Suspensión Deportiva BMW M3</title>
-      </image>
+      <description>Suspensión deportiva para tu BMW M3. Mejora la estabilidad y la conducción de tu coche en todas las condiciones.</description>
     </item>
 
   </channel>
