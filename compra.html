@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Compra - Concesionario Online</title>
     <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function validarFormulario(event) {
+            const form = event.target;
+            let valido = true;
+            let mensajesError = '';
+
+            const nombre = form.nombre.value;
+            const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+            if (!regexNombre.test(nombre)) {
+                valido = false;
+                mensajesError += 'El nombre solo puede contener letras y espacios.\n';
+            }
+
+            const telefono = form.telefono.value;
+            const regexTelefono = /^[0-9]{9}$/;
+            if (!regexTelefono.test(telefono)) {
+                valido = false;
+                mensajesError += 'El teléfono debe tener 9 dígitos numéricos.\n';
+            }
+
+            const email = form.email.value;
+            const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!regexEmail.test(email)) {
+                valido = false;
+                mensajesError += 'Por favor, ingrese un correo electrónico válido.\n';
+            }
+
+            const monto = parseFloat(form.numero_pago.value);
+            if (isNaN(monto) || monto <= 0) {
+                valido = false;
+                mensajesError += 'El monto del pago debe ser mayor que 0.\n';
+            }
+
+            if (!valido) {
+                alert('Errores en el formulario:\n' + mensajesError);
+                event.preventDefault();
+            }
+        }
+
+        window.onload = function() {
+            const formulario = document.querySelector('form');
+            formulario.addEventListener('submit', validarFormulario);
+        };
+    </script>
 </head>
 <body>
 
