@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,47 +8,69 @@
     <link rel="stylesheet" href="styles.css">
 
     <script>
-        function validarFormulario(event) {
-            const form = event.target;
-            let valido = true;
-            let mensajesError = '';
-
-            const nombre = form.nombre.value;
-            const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
-            if (!regexNombre.test(nombre)) {
-                valido = false;
-                mensajesError += 'El nombre solo puede contener letras y espacios.\n';
-            }
-
-            const telefono = form.telefono.value;
-            const regexTelefono = /^[0-9]{9}$/;
-            if (!regexTelefono.test(telefono)) {
-                valido = false;
-                mensajesError += 'El teléfono debe tener 9 dígitos numéricos.\n';
-            }
-
-            const email = form.email.value;
-            const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!regexEmail.test(email)) {
-                valido = false;
-                mensajesError += 'Por favor, ingrese un correo electrónico válido.\n';
-            }
-
-            const monto = parseFloat(form.numero_pago.value);
-            if (isNaN(monto) || monto <= 0) {
-                valido = false;
-                mensajesError += 'El monto del pago debe ser mayor que 0.\n';
-            }
-
-            if (!valido) {
-                alert('Errores en el formulario:\n' + mensajesError);
-                event.preventDefault();
-            }
-        }
-
         window.onload = function() {
+            // Seleccionamos todos los campos que necesitan validación
+            const nombre = document.getElementById('nombre');
+            const telefono = document.getElementById('telefono');
+            const modelo = document.getElementById('modelo');
+            const color = document.getElementById('color');
+            const numeroPago = document.getElementById('numero_pago');
+
+            // Validación en tiempo real para campos de texto
+            nombre.addEventListener('input', function() {
+                if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombre.value)) {
+                    nombre.setCustomValidity("Este campo solo puede contener letras y espacios.");
+                } else {
+                    nombre.setCustomValidity(""); // Se limpia el mensaje si es válido
+                }
+                nombre.reportValidity(); // Muestra el mensaje de error inmediatamente
+            });
+
+            modelo.addEventListener('input', function() {
+                if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(modelo.value)) {
+                    modelo.setCustomValidity("Este campo solo puede contener letras y espacios.");
+                } else {
+                    modelo.setCustomValidity("");
+                }
+                modelo.reportValidity();
+            });
+
+            color.addEventListener('input', function() {
+                if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(color.value)) {
+                    color.setCustomValidity("Este campo solo puede contener letras y espacios.");
+                } else {
+                    color.setCustomValidity("");
+                }
+                color.reportValidity();
+            });
+
+            // Validación de números (como teléfono y monto)
+            telefono.addEventListener('input', function() {
+                if (!/^[0-9]{9}$/.test(telefono.value)) {
+                    telefono.setCustomValidity("Este campo debe contener 9 dígitos numéricos.");
+                } else {
+                    telefono.setCustomValidity("");
+                }
+                telefono.reportValidity();
+            });
+
+            numeroPago.addEventListener('input', function() {
+                if (parseFloat(numeroPago.value) <= 0) {
+                    numeroPago.setCustomValidity("El monto debe ser mayor que 0.");
+                } else {
+                    numeroPago.setCustomValidity("");
+                }
+                numeroPago.reportValidity();
+            });
+
+            // Validación general antes de enviar el formulario
             const formulario = document.querySelector('form');
-            formulario.addEventListener('submit', validarFormulario);
+            formulario.addEventListener('submit', function(event) {
+                if (!formulario.checkValidity()) {
+                    event.preventDefault();
+                    alert('Por favor, corrige los errores antes de enviar el formulario.');
+                }
+            });
         };
     </script>
 </head>
