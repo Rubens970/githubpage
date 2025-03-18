@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Tienda de Coches XYZ</title>
+  <link href="https://rubens970.github.io/githubpage/" />
+  <updated>2025-03-18T00:00:00Z</updated>
+  <id>https://rubens970.github.io/githubpage/</id>
+  <author>
+    <name>Tienda de Coches XYZ</name>
+  </author>
+  <subtitle>Últimos vehículos disponibles y ofertas especiales en nuestra tienda de coches y piezas de tuning</subtitle>
+  
+  <entry>
+    <title>Nuevo Toyota Corolla 2025</title>
+    <link href="https://rubens970.github.io/githubpage/coches.html" />
+    <id>https://rubens970.github.io/githubpage/coches.html#toyota-corolla-2025</id>
+    <updated>2025-03-18T00:00:00Z</updated>
+    <summary>Descubre el nuevo Toyota Corolla 2025, con las últimas características de seguridad y tecnología avanzada. Ideal para la ciudad con una eficiencia de combustible impresionante.</summary>
+  </entry>
+
+  <entry>
+    <title>Oferta especial: Ford Mustang 2024</title>
+    <link href="https://rubens970.github.io/githubpage/coches.html" />
+    <id>https://rubens970.github.io/githubpage/coches.html#ford-mustang-2024</id>
+    <updated>2025-03-18T00:00:00Z</updated>
+    <summary>¡Aprovecha nuestra oferta especial por tiempo limitado para el Ford Mustang 2024! Con un descuento exclusivo para compras online.</summary>
+  </entry>
+
+  <entry>
+    <title>Audi A4 2023 en stock</title>
+    <link href="https://rubens970.github.io/githubpage/coches.html" />
+    <id>https://rubens970.github.io/githubpage/coches.html#audi-a4-2023</id>
+    <updated>2025-03-18T00:00:00Z</updated>
+    <summary>El elegante Audi A4 2023 ahora disponible en nuestro concesionario. Descúbrelo en detalle y disfruta de un diseño exclusivo.</summary>
+  </entry>
+
+  <entry>
+    <title>Nuevo SUV BMW X5 2025</title>
+    <link href="https://rubens970.github.io/githubpage/coches.html" />
+    <id>https://rubens970.github.io/githubpage/coches.html#bmw-x5-2025</id>
+    <updated>2025-03-18T00:00:00Z</updated>
+    <summary>Explora el nuevo SUV BMW X5 2025, ahora disponible con nuevas opciones de motorización y tecnología. Perfecto para familias.</summary>
+  </entry>
+
+  <entry>
+    <title>Pieza de Tuning para Ford Mustang</title>
+    <link href="https://rubens970.github.io/githubpage/piezas.html" />
+    <id>https://rubens970.github.io/githubpage/piezas.html#tuning-ford-mustang</id>
+    <updated>2025-03-18T00:00:00Z</updated>
+    <summary>Mejora el rendimiento de tu Ford Mustang con nuestra pieza de tuning exclusiva. Aumenta la potencia y mejora el estilo de tu coche.</summary>
+  </entry>
+
+  <entry>
+    <title>Suspensión Deportiva para BMW M3</title>
+    <link href="https://rubens970.github.io/githubpage/piezas.html" />
+    <id>https://rubens970.github.io/githubpage/piezas.html#suspension-bmw-m3</id>
+    <updated>2025-03-18T00:00:00Z</updated>
+    <summary>Suspensión deportiva para tu BMW M3. Mejora la estabilidad y la conducción de tu coche en todas las condiciones.</summary>
+  </entry>
+
+</feed>
