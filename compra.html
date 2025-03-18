@@ -15,62 +15,105 @@
             const modelo = document.getElementById('modelo');
             const color = document.getElementById('color');
             const numeroPago = document.getElementById('numero_pago');
+            const email = document.getElementById('email'); // Añadimos el campo de email
+            const formulario = document.querySelector('form');
+            const btnEnviar = document.querySelector('.tick-button');
+            
+            // Mensajes de error
+            const nombreError = document.getElementById('nombreError');
+            const telefonoError = document.getElementById('telefonoError');
+            const modeloError = document.getElementById('modeloError');
+            const colorError = document.getElementById('colorError');
+            const numeroPagoError = document.getElementById('numeroPagoError');
+            const emailError = document.getElementById('emailError'); // Mensaje de error para el email
+            const formError = document.getElementById('formError');
+
+            // Validación en tiempo real para el campo de correo electrónico
+            email.addEventListener('input', function() {
+                // Validamos que contenga al menos un "@" 
+                if (!/\S+@\S+\.\S+/.test(email.value)) {
+                    emailError.textContent = "El correo electrónico debe contener al menos un '@' y un dominio válido.";
+                } else {
+                    emailError.textContent = "";
+                }
+                botonDisabled();
+            });
 
             // Validación en tiempo real para campos de texto
             nombre.addEventListener('input', function() {
                 if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(nombre.value)) {
-                    nombre.setCustomValidity("Este campo solo puede contener letras y espacios.");
+                    nombreError.textContent = "Este campo solo puede contener letras y espacios.";
                 } else {
-                    nombre.setCustomValidity(""); // Se limpia el mensaje si es válido
+                    nombreError.textContent = "";
                 }
-                nombre.reportValidity(); // Muestra el mensaje de error inmediatamente
+                botonDisabled();
             });
 
             modelo.addEventListener('input', function() {
                 if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(modelo.value)) {
-                    modelo.setCustomValidity("Este campo solo puede contener letras y espacios.");
+                    modeloError.textContent = "Este campo solo puede contener letras y espacios.";
                 } else {
-                    modelo.setCustomValidity("");
+                    modeloError.textContent = "";
                 }
-                modelo.reportValidity();
+                botonDisabled();
             });
 
             color.addEventListener('input', function() {
                 if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(color.value)) {
-                    color.setCustomValidity("Este campo solo puede contener letras y espacios.");
+                    colorError.textContent = "Este campo solo puede contener letras y espacios.";
                 } else {
-                    color.setCustomValidity("");
+                    colorError.textContent = "";
                 }
-                color.reportValidity();
+                botonDisabled();
             });
 
             // Validación de números (como teléfono y monto)
             telefono.addEventListener('input', function() {
                 if (!/^[0-9]{9}$/.test(telefono.value)) {
-                    telefono.setCustomValidity("Este campo debe contener 9 dígitos numéricos.");
+                    telefonoError.textContent = "Este campo debe contener 9 dígitos numéricos.";
                 } else {
-                    telefono.setCustomValidity("");
+                    telefonoError.textContent = "";
                 }
-                telefono.reportValidity();
+                botonDisabled();
             });
 
             numeroPago.addEventListener('input', function() {
                 if (parseFloat(numeroPago.value) <= 0) {
-                    numeroPago.setCustomValidity("El monto debe ser mayor que 0.");
+                    numeroPagoError.textContent = "El monto debe ser mayor que 0.";
                 } else {
-                    numeroPago.setCustomValidity("");
+                    numeroPagoError.textContent = "";
                 }
-                numeroPago.reportValidity();
+                botonDisabled();
             });
 
             // Validación general antes de enviar el formulario
-            const formulario = document.querySelector('form');
             formulario.addEventListener('submit', function(event) {
                 if (!formulario.checkValidity()) {
                     event.preventDefault();
-                    alert('Por favor, corrige los errores antes de enviar el formulario.');
+                    formError.textContent = 'Por favor, corrige los errores antes de enviar el formulario.';
+                } else {
+                    formError.textContent = '';  // Limpiar mensaje de error general si es válido
                 }
             });
+
+            // Función para habilitar/deshabilitar el botón de enviar
+            function botonDisabled() {
+                if (
+                    document.getElementById("nombre").checkValidity() &&
+                    document.getElementById("telefono").checkValidity() &&
+                    document.getElementById("modelo").checkValidity() &&
+                    document.getElementById("color").checkValidity() &&
+                    document.getElementById("numero_pago").checkValidity() &&
+                    document.getElementById("email").checkValidity()  // Validar si el correo es válido
+                ) {
+                    btnEnviar.disabled = false; // Activa el botón de enviar
+                } else {
+                    btnEnviar.disabled = true; // Desactiva el botón de enviar
+                }
+            }
+
+            // Ejecuta la función de validación al cargar la página
+            botonDisabled();
         };
     </script>
 </head>
@@ -96,12 +139,15 @@
             
             <label for="nombre">Nombre Completo:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo se permiten letras y espacios">
-            
+            <span id="nombreError" class="error"></span> <!-- Error nombre -->
+
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" placeholder="example@correo.com" required>
-            
+            <span id="emailError" class="error"></span> <!-- Error email -->
+
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="123456789" required pattern="[0-9]{9}" title="Debe ingresar 9 dígitos numéricos">
+            <span id="telefonoError" class="error"></span> <!-- Error telefono -->
             
             <label for="direccion">Dirección:</label>
             <textarea id="direccion" name="direccion" rows="3" placeholder="Tu dirección completa" required></textarea>
@@ -119,9 +165,11 @@
 
             <label for="modelo">Modelo:</label>
             <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla, Mustang" required>
+            <span id="modeloError" class="error"></span> <!-- Error modelo -->
 
             <label for="color">Color Preferido:</label>
             <input type="text" id="color" name="color" placeholder="Ej: Rojo, Azul">
+            <span id="colorError" class="error"></span> <!-- Error color -->
 
             <label for="foto">Subir Foto del Vehículo (opcional):</label>
             <input type="file" id="foto" name="foto" accept="image/*">
@@ -150,6 +198,7 @@
 
             <label for="numero_pago">Monto del Pago:</label>
             <input type="number" id="numero_pago" name="numero_pago" required min="0" step="100" placeholder="Monto en USD">
+            <span id="numeroPagoError" class="error"></span> <!-- Error monto -->
 
             <label for="url_pago">URL de la Transacción:</label>
             <input type="url" id="url_pago" name="url_pago" placeholder="https://ejemplo.com/pago">
@@ -165,8 +214,9 @@
             <label for="terminos">Acepto los términos y condiciones de compra</label>
 
             <div class="alinear-centro">
-                <button type="submit" class="tick-button">Enviar Solicitud</button>
+                <button type="submit" class="tick-button" disabled>Enviar Solicitud</button>
             </div>
+            <span id="formError" class="error"></span> <!-- Error general del formulario -->
         </form>
     </div>
 

@@ -293,8 +293,3 @@ form h1, form h2 {
 .submit-button:hover {
     background-color: #333;
 }
-
-.error {
-    border: 2px solid red !important;
-    background-color: #ffe6e6;
-}
