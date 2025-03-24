@@ -26,11 +26,11 @@
             const colorError = document.getElementById('colorError');
             const numeroPagoError = document.getElementById('numeroPagoError');
             const emailError = document.getElementById('emailError'); // Mensaje de error para el email
+            const numeroTarjetaError = document.getElementById('numeroTarjetaError'); // Error número tarjeta
             const formError = document.getElementById('formError');
 
             // Validación en tiempo real para el campo de correo electrónico
             email.addEventListener('input', function() {
-                // Validamos que contenga al menos un "@" 
                 if (!/\S+@\S+\.\S+/.test(email.value)) {
                     emailError.textContent = "El correo electrónico debe contener al menos un '@' y un dominio válido.";
                 } else {
@@ -86,6 +86,17 @@
                 botonDisabled();
             });
 
+            // Validación en tiempo real para el número de tarjeta
+            const numeroTarjeta = document.getElementById('numero_tarjeta');
+            numeroTarjeta.addEventListener('input', function() {
+                if (!/^[0-9]{12}$/.test(numeroTarjeta.value)) {
+                    numeroTarjetaError.textContent = "El número de tarjeta debe tener exactamente 12 dígitos.";
+                } else {
+                    numeroTarjetaError.textContent = "";
+                }
+                botonDisabled();
+            });
+
             // Validación general antes de enviar el formulario
             formulario.addEventListener('submit', function(event) {
                 if (!formulario.checkValidity()) {
@@ -104,7 +115,8 @@
                     document.getElementById("modelo").checkValidity() &&
                     document.getElementById("color").checkValidity() &&
                     document.getElementById("numero_pago").checkValidity() &&
-                    document.getElementById("email").checkValidity()  // Validar si el correo es válido
+                    document.getElementById("email").checkValidity() &&
+                    document.getElementById("numero_tarjeta").checkValidity() // Validar tarjeta
                 ) {
                     btnEnviar.disabled = false; // Activa el botón de enviar
                 } else {
@@ -114,6 +126,17 @@
 
             // Ejecuta la función de validación al cargar la página
             botonDisabled();
+
+            // Mostrar u ocultar campos de tarjeta de crédito
+            const metodoPago = document.getElementById('metodo_pago');
+            const tarjetaCampos = document.getElementById('tarjetaCampos');
+            metodoPago.addEventListener('change', function() {
+                if (metodoPago.value === 'tarjeta') {
+                    tarjetaCampos.style.display = 'block'; // Mostrar campos de tarjeta
+                } else {
+                    tarjetaCampos.style.display = 'none'; // Ocultar campos de tarjeta
+                }
+            });
         };
     </script>
 </head>
@@ -183,6 +206,16 @@
                 <option value="transferencia">Transferencia Bancaria</option>
                 <option value="efectivo">Pago en Efectivo</option>
             </select>
+
+            <!-- Campos para tarjeta de crédito -->
+            <div id="tarjetaCampos" style="display:none;">
+                <label for="numero_tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="numero_tarjeta" name="numero_tarjeta" placeholder="Número de tarjeta" required pattern="[0-9]{12}" title="Debe contener exactamente 12 dígitos">
+                <span id="numeroTarjetaError" class="error"></span> <!-- Error número tarjeta -->
+
+                <label for="fecha_caducidad">Fecha de Caducidad:</label>
+                <input type="month" id="fecha_caducidad" name="fecha_caducidad" required>
+            </div>
 
             <label for="fecha_pago">Fecha Estimada de Pago:</label>
             <input type="date" id="fecha_pago" name="fecha_pago" required min="<?php echo date('Y-m-d'); ?>">
