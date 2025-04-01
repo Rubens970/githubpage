@@ -293,3 +293,12 @@ form h1, form h2 {
 .submit-button:hover {
     background-color: #333;
 }
+
+.error {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
